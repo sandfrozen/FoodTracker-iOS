@@ -58,10 +58,13 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCb-ff-p4e">
                                                 <rect key="frame" x="0.0" y="66.5" width="151" height="30"/>
                                                 <state key="normal" title="Set Default Label Text"/>
+                                                <connections>
+                                                    <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDe-na-qAc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="T3o-f1-od1" secondAttribute="trailing" id="XWS-wr-9u5"/>
+                                            <constraint firstAttribute="trailing" secondItem="T3o-f1-od1" secondAttribute="trailing" id="5tI-Rw-EL9"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -69,11 +72,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="t9B-d2-orU" secondAttribute="trailing" id="RDe-UQ-oVW"/>
-                            <constraint firstItem="t9B-d2-orU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="WsZ-5L-jXD"/>
-                            <constraint firstItem="t9B-d2-orU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yal-g7-k92"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t9B-d2-orU" secondAttribute="trailing" id="J0T-KE-oG9"/>
+                            <constraint firstItem="t9B-d2-orU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Wjt-5i-uml"/>
+                            <constraint firstItem="t9B-d2-orU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vUT-FF-KFO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="XOq-UP-7wE" id="cJC-7n-iR5"/>
+                        <outlet property="nameTextField" destination="T3o-f1-od1" id="P04-Ta-Ylg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
