@@ -38,7 +38,7 @@ class MealTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         // Table view cells are reused and should be dequeued using cell identifier.
         let cellIdentifier = "MealTableViewCell"
 
@@ -49,6 +49,7 @@ class MealTableViewController: UITableViewController {
         let meal = meals[indexPath.row]
         
         cell.nameLabel.text = meal.name
+
         cell.photoImageView.image = meal.photo
         cell.ratingControl.rating = meal.rating
 
@@ -102,9 +103,9 @@ class MealTableViewController: UITableViewController {
     */
     
     //MARK: Actions
+    // This function is triggered after func prepare from MealViewControler (source)
     @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
-            
             // Add a new meal.
             let nextIndexPath = IndexPath(row: meals.count, section: 0)
             

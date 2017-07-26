@@ -128,7 +128,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="qpy-Dh-EPd">
                             <connections>
-                                <segue destination="Tns-In-V6m" kind="unwind" unwindAction="unwindToMealListWithSender:" id="5vJ-EC-ObW"/>
+                                <segue destination="Tns-In-V6m" kind="unwind" unwindAction="unwindToMealListWithSender:" id="miM-qO-2OR"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

@@ -46,7 +46,7 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         updateSaveButtonState()
-        navigationItem.title = textField.text
+        navigationItem.title = textField.text ?? ""
     }
     
     //MARK: UIImagePickerControllerDelegate
@@ -74,6 +74,8 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     // This method lets you configure a view controller before it's presented.
+    // This function is triggered before func unwindToMealList from MealTableViewControler
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
@@ -111,5 +113,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         // Disable the Save button if the text field is empty.
         let text = nameTextField.text ?? ""
         saveButton.isEnabled = !text.isEmpty
+        
     }
 }
